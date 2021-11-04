@@ -216,6 +216,12 @@
           snake.direction = Direction.bottom
           snakeMove()
         }
+      } else if (e.keyCode === 13) {
+        // 暂停
+        if (timer) clearInterval(timer)
+      } else if (e.keyCode === 32) {
+        // 开始
+        snakeMove()
       }
     })
 
